@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  login-test-app:
+    build: .
+    container_name: login-test-app
+    ports:
+      - '3000:80'
