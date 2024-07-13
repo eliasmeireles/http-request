@@ -1,37 +1,38 @@
-# OAuth Login React App
+# React HTTP Request App
 
-This is a simple React application that provides a login page to authenticate against an OAuth server. The app allows
-users to input a URL, username, and password to send a POST request to the specified OAuth server endpoint.
+This is a simple React application that provides a user interface for making HTTP requests. The app allows users to
+input a URL, method, headers, path parameters, query parameters, and request body to send a request to a specified
+endpoint.
 
 ## Features
 
-- User login form with URL, username, and password fields.
+- User interface to input URL, method, headers, path parameters, query parameters, and request body.
 - Displays success or failure messages based on the server response.
 - Shows detailed JSON response from the server.
-
-## Requirements
-
-- Node.js
-- yarn
-- Axios
+- Clipboard icons for easy copying of inputs and responses.
+- Toast notifications for successful copy actions.
 
 ## Getting Started
 
+Clone the repository and install the dependencies using Yarn:
+
 ```shell
-git clone https://github.com/eliasmeireles/oauth-login-test.git
-cd oauth-login-test
+git clone https://github.com/eliasmeireles/http-request.git
+cd http-request
 yarn install
 yarn start
 ```
 
 ## Docker run
 
+- To run the application using Docker, use the following command:
+
 ````shell
-docker run -p 3000:80 eliasmeireles/login-test
+docker run -p 3000:80 eliasmeireles/http-request
 `````
 
-http://localhost:3000
+Access the application at http://localhost:3000/
 
-![login-ok.png](/doc/home.png)
+![login-ok.png](/doc/get.png)
 
-![login-ok.png](/doc/login-ok.png)
+![login-ok.png](/doc/post.png)

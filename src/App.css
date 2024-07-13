@@ -6,7 +6,7 @@ body {
 .App {
     text-align: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-content: center;
 
 }
@@ -14,11 +14,36 @@ body {
 .App-header {
     padding: 20px;
     display: flex;
+    flex: 5;
     flex-direction: column;
     /*align-items: center;*/
     /*justify-content: center;*/
     font-size: calc(10px + 2vmin);
     color: white;
+}
+
+.row {
+    width: 80%;
+    max-width: 525px;
+    display: flex;
+    flex-direction: row;
+    align-content: start;
+}
+
+.input-container {
+    display: flex;
+    width: 80%;
+    max-width: 525px;
+    flex-direction: column;
+    align-items: start;
+}
+
+.row .method {
+    flex: 2
+}
+
+.row .url {
+    flex: 8
 }
 
 form {
@@ -27,12 +52,55 @@ form {
     align-items: center;
 }
 
-input {
-    padding: 10px;
+.select-container select {
+    width: 100%;
+    padding: 8px;
     margin: 5px 0 20px;
-    width: 200px;
+    font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fff;
+    /* Add any additional styling as needed */
+}
+
+textarea {
+    margin: 5px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input, textarea {
+    padding: 10px;
+    margin: 5px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.copy-container {
+    position: relative;
+}
+
+.copy-icon {
+    position: absolute;
+    right: -15px;
+    top: 38px;
+}
+.response-container.copy-container .copy-icon{
+    top: 8px;
+    right: 8px;
+}
+
+textarea {
+    min-height: 100px;
+    max-height: 255px;
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
+}
+
+textarea.json-body {
+    min-height: 150px;
 }
 
 button {
@@ -54,31 +122,12 @@ button:hover {
     display: none;
 }
 
-.success {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #3abf0b;
-}
-
-.failed {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #ff6b6b;
-}
-
 .content-response {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.input-container {
-    display: flex;
-    width: 80%;
-    max-width: 525px;
+    flex: 5;
     flex-direction: column;
     align-items: start;
+    justify-content: start;
 }
 
 .input-container input {
