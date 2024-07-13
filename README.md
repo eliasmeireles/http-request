@@ -24,6 +24,14 @@ yarn install
 yarn start
 ```
 
+## Docker run
+
+````shell
+docker run -p 3000:80 eliasmeireles/login-test
+`````
+
+http://localhost:3000
+
 ![login-ok.png](/doc/home.png)
 
 ![login-ok.png](/doc/login-ok.png)
