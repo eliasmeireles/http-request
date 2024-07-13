@@ -24,7 +24,7 @@ const ClipIcon: React.FC<ClipIconProps> = ({target, size}) => {
         <FontAwesomeIcon
             color="black"
             icon={faCopy}
-            size={size}
+            size={size ?? 'xs'}
             className="copy-icon"
             onClick={() => copyToClipboard(target)}
         />

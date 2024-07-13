@@ -60,22 +60,25 @@ function App() {
                 <form onSubmit={handleRequest}>
                     <div className="row">
                         <div className={'input-container method'}>
-                            <label>Method: </label>
+                            <label>Method </label>
                             <div className="select-container">
                                 <select
                                     value={method}
                                     onChange={(e) => setMethod(e.target.value)}
                                 >
                                     <option value="GET">GET</option>
-                                    <option value="POST">POST</option>
                                     <option value="PUT">PUT</option>
+                                    <option value="POST">POST</option>
                                     <option value="DELETE">DELETE</option>
-                                    {/* Add other HTTP methods as needed */}
+                                    <option value="PATCH">PATCH</option>
+                                    <option value="HEAD">HEAD</option>
+                                    <option value="OPTIONS">OPTIONS</option>
+                                    <option value="TRACE">TRACE</option>
                                 </select>
                             </div>
                         </div>
                         <div className={'input-container url copy-container'}>
-                            <label>URL: </label>
+                            <label>URL </label>
                             <input
                                 type="text"
                                 value={url}
@@ -86,7 +89,7 @@ function App() {
                         </div>
                     </div>
                     <div className={'input-container copy-container'}>
-                        <label>Path Parameters (Optional): </label>
+                        <label>Path Parameters (Optional) </label>
                         <input
                             type="text"
                             value={pathParams}
@@ -96,7 +99,7 @@ function App() {
 
                     </div>
                     <div className={'input-container copy-container'}>
-                        <label>Query Parameters (Optional): </label>
+                        <label>Query Parameters (Optional) </label>
                         <input
                             type="text"
                             value={queryParams}
@@ -107,7 +110,7 @@ function App() {
                     </div>
 
                     <div className={'input-container copy-container'}>
-                        <label>Headers (JSON): </label>
+                        <label>Headers (JSON) </label>
                         <textarea
                             className="headers-json"
                             rows={2}
@@ -118,7 +121,7 @@ function App() {
 
                     </div>
                     <div className={'input-container copy-container'}>
-                        <label>JSON Input (Optional):</label>
+                        <label>JSON Input (Optional)</label>
                         <textarea
                             className="json-body"
                             rows={4}
@@ -143,4 +146,4 @@ function App() {
     );
 }
 
-export default App;
+export default App

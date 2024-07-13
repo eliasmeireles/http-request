@@ -38,6 +38,10 @@ body {
     align-items: start;
 }
 
+.method {
+    margin-right: 8px;
+}
+
 .row .method {
     flex: 2
 }
@@ -83,13 +87,15 @@ input, textarea {
 
 .copy-icon {
     position: absolute;
-    right: -15px;
-    top: 38px;
+    right: -20px;
+    top: 42px;
 }
-.response-container.copy-container .copy-icon{
-    top: 8px;
-    right: 8px;
+
+.response-container.copy-container .copy-icon {
+    top: 4px;
+    right: 4px;
 }
+
 
 textarea {
     min-height: 100px;
